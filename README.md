@@ -12,7 +12,7 @@ Creates a standard Consul server security group in AWS that includes:
 
 ## Input Variables
 
-- `environment`: [Optional] Environment name, defaults to "consul-server".
+- `name`: [Optional] Name for resources, defaults to \"consul-server-ports-aws\".
 - `vpc_id`: [Required] VPC ID to provision resources in.
 - `cidr_blocks`: [Required] CIDR blocks for Security Groups.
 

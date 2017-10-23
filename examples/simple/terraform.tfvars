@@ -1,1 +1,1 @@
-environment = "consul-server-ports-aws-simple"
+vpc_cidr = "10.139.0.0/16"
