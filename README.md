@@ -1,8 +1,6 @@
 # AWS Consul Server Ports Terraform Module
 
-Creates a standard Consul server security group in AWS that includes:
-
-- A Consul cluster with one node in each private subnet
+Creates a standard Consul server security group in AWS.
 
 ## Environment Variables
 
@@ -12,7 +10,8 @@ Creates a standard Consul server security group in AWS that includes:
 
 ## Input Variables
 
-- `name`: [Optional] Name for resources, defaults to \"consul-server-ports-aws\".
+- `provision`: [Optional] Override to prevent provisioning resources in this module, defaults to "true".
+- `name`: [Optional] Name for resources, defaults to "consul-server-ports-aws".
 - `vpc_id`: [Required] VPC ID to provision resources in.
 - `cidr_blocks`: [Required] CIDR blocks for Security Groups.
 
