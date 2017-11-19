@@ -1,10 +1,9 @@
 # https://www.consul.io/docs/agent/options.html#ports
 module "consul_client_ports_aws" {
-  source = "../consul-client-ports-aws"
-  # source = "git@github.com:hashicorp-modules/consul-client-ports-aws?ref=f-refactor"
+  source = "git@github.com:hashicorp-modules/consul-client-ports-aws?ref=f-refactor"
 
   provision   = "${var.provision}"
-  name        = "${var.name}"
+  name        = "${var.name}-consul-server"
   vpc_id      = "${var.vpc_id}"
   cidr_blocks = "${var.cidr_blocks}"
 }
