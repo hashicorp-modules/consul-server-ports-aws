@@ -3,7 +3,7 @@ module "consul_client_ports_aws" {
   source = "git@github.com:hashicorp-modules/consul-client-ports-aws?ref=f-refactor"
 
   provision   = "${var.provision}"
-  name        = "${var.name}-consul-server"
+  name        = "${var.name}"
   vpc_id      = "${var.vpc_id}"
   cidr_blocks = "${var.cidr_blocks}"
 }
