@@ -4,7 +4,7 @@ terraform {
 
 # https://www.consul.io/docs/agent/options.html#ports
 module "consul_client_ports_aws" {
-  source = "git@github.com:hashicorp-modules/consul-client-ports-aws?ref=f-refactor"
+  source = "github.com/hashicorp-modules/consul-client-ports-aws?ref=f-refactor"
 
   count       = "${var.count}"
   name        = "${var.name}"

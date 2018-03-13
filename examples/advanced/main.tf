@@ -8,8 +8,8 @@ resource "aws_vpc" "main" {
 }
 
 module "consul_server_ports_aws" {
+  # source = "github.com/hashicorp-modules/consul-server-ports-aws?ref=f-refactor"
   source = "../../../consul-server-ports-aws"
-  # source = "git@github.com:hashicorp-modules/consul-server-ports-aws?ref=f-refactor"
 
   count       = "${var.count}"
   name        = "${var.name}"
