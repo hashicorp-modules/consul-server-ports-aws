@@ -10,10 +10,11 @@ Creates a standard Consul server security group in AWS.
 
 ## Input Variables
 
-- `count`: [Optional] Module count, defaults to "1".
+- `create`: [Optional] Create Module, defaults to true.
 - `name`: [Optional] Name for resources, defaults to "consul-server-ports-aws".
 - `vpc_id`: [Required] VPC ID to provision resources in.
 - `cidr_blocks`: [Required] CIDR blocks for Security Groups.
+- `tags`: [Optional] Optional map of tags to set on resources, defaults to empty map.
 
 ## Outputs
 
