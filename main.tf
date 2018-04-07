@@ -2,6 +2,10 @@ terraform {
   required_version = ">= 0.9.3"
 }
 
+provider "aws" {
+  version = "~> 1.12"
+}
+
 # https://www.consul.io/docs/agent/options.html#ports
 module "consul_client_ports_aws" {
   source = "github.com/hashicorp-modules/consul-client-ports-aws?ref=f-refactor"

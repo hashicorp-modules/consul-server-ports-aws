@@ -2,6 +2,8 @@
 
 Creates a standard Consul server security group in AWS.
 
+Checkout [examples](./examples) for fully functioning examples.
+
 ## Environment Variables
 
 - `AWS_DEFAULT_REGION`
