@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
 }
 
 module "consul_server_ports_aws" {
-  # source = "github.com/hashicorp-modules/consul-server-ports-aws?ref=f-refactor"
+  # source = "github.com/hashicorp-modules/consul-server-ports-aws"
   source = "../../../consul-server-ports-aws"
 
   create      = "${var.create}"
