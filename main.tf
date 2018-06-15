@@ -29,6 +29,19 @@ resource "aws_security_group_rule" "server_rpc_tcp" {
   cidr_blocks       = ["${var.cidr_blocks}"]
 }
 
+#Consul Connect Default ports - TCP
+resource "aws_security_group_rule" "server_connect_tcp" {
+  count = "${var.create ? 1 : 0}"
+
+  security_group_id = "${module.consul_client_ports_aws.consul_client_sg_id}"
+  type              = "ingress"
+  protocol          = "tcp"
+  from_port         = 20000
+  to_port           = 20255
+  cidr_blocks       = ["${var.cidr_blocks}"]
+}
+
+
 # As of Consul 0.8, it is recommended to enable connection between servers through port 8302 for both
 # TCP and UDP on the LAN interface as well for the WAN Join Flooding feature. See also: Consul 0.8.0
 # CHANGELOG and GH-3058
